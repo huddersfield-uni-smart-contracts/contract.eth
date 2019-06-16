@@ -1,17 +1,15 @@
 const pageAccess = {
     'client' : {
         contracts : true,
-        createContract : false,
+        createContract : true,
         editContract : false,
         home : true
     },
     'company' : {
         contracts : true,
-        createContract : true,
+        createContract : false,
         editContract : false,
         home : true
-
-
     },
     'validator' : {
         contracts : true,

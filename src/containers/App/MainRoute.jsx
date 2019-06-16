@@ -78,7 +78,6 @@ class MainRoute extends React.Component {
                 <Layout />
                 <div className="container__wrap">
                     <Route exact path={'/company'} component={EntryPage}/>
-                    <Route path={'/company/createContract'} component={CreateContract}/>	
                     <Route path={'/company/contracts'} component={Contracts}/>	
                 </div>
             </div>
@@ -91,6 +90,7 @@ class MainRoute extends React.Component {
                 <Layout />
                 <div className="container__wrap">
                     <Route exact path={'/client'} component={EntryPage}/>
+                    <Route path={'/client/createContract'} component={CreateContract}/>	
                     <Route path={'/client/contracts'} component={Contracts}/>	
                 </div>
             </div>

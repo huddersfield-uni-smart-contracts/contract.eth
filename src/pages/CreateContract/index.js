@@ -10,17 +10,14 @@ import APISingleton from '../../controllers/API';
 import NumberFormat from 'react-number-format';
 import { Button, MenuItem } from '@material-ui/core';
 import Numbers from '../../services/numbers';
-import keythereum from "keythereum";
 import StringWorkerSingleton from '../../services/string';
-
+import randomHex from 'randomhex';
 const logo = `${process.env.PUBLIC_URL}/img/logo.png`;
 
 function genAddress(){
-    var params = { keyBytes: 32, ivBytes: 16 };
-    var dk = keythereum.create(params);
-    var keyDump = keythereum.dump("password123", dk.privateKey, dk.salt, dk.iv);
-    return  "0x" + keyDump.address;
+    return randomHex(16); // get 32 random bytes as HEX string (0x + 64 chars)
 }
+
 
 const defaultProps = {
     validators : [],
@@ -29,8 +26,7 @@ const defaultProps = {
     validator_fee : 0,
     fee_percentage : 0.01,
     state : 'Waiting for approval',
-    total_paid : 0,
-    contract_address : genAddress()
+    total_paid : 0
 }
 
 
@@ -68,7 +64,9 @@ class CreateContract extends React.Component{
 
     constructor(props){
         super(props)
-        this.state = {...defaultProps}
+        this.state = {...defaultProps,
+            contract_address : genAddress()
+        }
     }
 
     componentDidMount(){

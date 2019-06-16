@@ -10,20 +10,12 @@ import APISingleton from '../../controllers/API';
 import NumberFormat from 'react-number-format';
 import { Button } from '@material-ui/core';
 import Numbers from '../../services/numbers';
-import keythereum from "keythereum";
 import _ from 'lodash';
 import { contractStatusArray } from '../Contracts/containers/codes';
 import StringWorkerSingleton from '../../services/string';
 import { MenuItem } from '@material-ui/core';
 
 const logo = `${process.env.PUBLIC_URL}/img/logo.png`;
-
-function genAddress(){
-    var params = { keyBytes: 32, ivBytes: 16 };
-    var dk = keythereum.create(params);
-    var keyDump = keythereum.dump("password123", dk.privateKey, dk.salt, dk.iv);
-    return  "0x" + keyDump.address;
-}
 
 const defaultProps = {
     validators : [],
@@ -33,8 +25,7 @@ const defaultProps = {
     fee_percentage : 0.01,
     state : 'Waiting for approval',
     total_paid : 0,
-    company : {},
-    contract_address : genAddress()
+    company : {}
 }
 
 

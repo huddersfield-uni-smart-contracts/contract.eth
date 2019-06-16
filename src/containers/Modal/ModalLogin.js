@@ -8,13 +8,11 @@ import {  TextField, Button } from '@material-ui/core';
 import _ from 'lodash';
 import { UserNetworkIcon, BitcoinIcon, AccountKeyIcon } from 'mdi-react';
 import {InputField} from '../../components/Input';
-import keythereum from 'keythereum';
+import randomHex from 'randomhex';
 
 function genAddress(){
-    var params = { keyBytes: 32, ivBytes: 16 };
-    var dk = keythereum.create(params);
-    var keyDump = keythereum.dump("password123", dk.privateKey, dk.salt, dk.iv);
-    return  "0x" + keyDump.address;
+    return randomHex(16); // get 32 random bytes as HEX string (0x + 64 chars)
+
 }
 
 
