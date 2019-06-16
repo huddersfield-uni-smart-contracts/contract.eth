@@ -48,7 +48,7 @@ class SidebarContent extends Component {
                 <ul className="sidebar__block">
                     <SidebarLink disabled={!this.state.home} title="Home Page" icon={faHome} route={`/${type}`} onClick={this.hideSidebar} />
                     <SidebarLink disabled={!this.state.createContract} title="Create Contract" icon={faFileInvoice} route={`/${type}/createContract`} onClick={this.hideSidebar} />
-                    <SidebarLink disabled={!this.state.editContract} title="Contracts" icon={faFileExport} route={`/${type}/editContract`} onClick={this.hideSidebar} />
+                    <SidebarLink disabled={!this.state.editContract} title="Edit Contract" icon={faFileExport} route={`/${type}/editContract`} onClick={this.hideSidebar} />
                     <SidebarLink disabled={!this.state.contracts} title="Contracts" icon={faFileContract} route={`/${type}/contracts`} onClick={this.hideSidebar} />
                 </ul>        
             </div>

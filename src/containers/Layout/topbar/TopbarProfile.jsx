@@ -29,7 +29,7 @@ class TopbarProfile extends PureComponent {
         let addressConcat = StringWorkerSingleton.toAddressConcat(profile.getAddress());
         
 		return (
-			<div style={{maringTop : 10}}>
+			<div className={'not-mobile'}>
                 <Row>
                     <Col lg={4}></Col>
                     <Col lg={3}>
