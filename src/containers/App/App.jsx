@@ -40,7 +40,6 @@ class App extends Component {
 	componentDidMount() {
         this.asyncCalls();
         this.startWallet();
-        
     }
     
     startWallet = async () => {
@@ -80,7 +79,6 @@ class App extends Component {
     
 
 	render() {
-		const { loaded, loading } = this.state;
 		return (
 			<Provider store={store}>
                 <BrowserRouter basename="/">
