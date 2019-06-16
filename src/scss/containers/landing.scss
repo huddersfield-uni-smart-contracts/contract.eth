@@ -158,9 +158,7 @@ $landing-gradient-hover: linear-gradient(228deg, darken(rgba(127, 244, 222, 0.95
 
 .landing__menu-nav-new {
     position: absolute;
-    @include themify($themes) {
-        background: themed('colorBetProtocolSecondary');
-    }
+   
         height: 6px;
     width: 6px;
     border-radius: 50%;
@@ -175,9 +173,7 @@ $landing-gradient-hover: linear-gradient(228deg, darken(rgba(127, 244, 222, 0.95
     box-shadow: 5px 10px 1px 1px #8162a5;
     font-size: 15px;
     padding : 5px 20px;
-    @include themify($themes) {
-        color: themed('colorBetProtocol');
-    }
+  
     &:hover{
         opacity: 0.6;
     }
@@ -212,7 +208,7 @@ $landing-gradient-hover: linear-gradient(228deg, darken(rgba(127, 244, 222, 0.95
     margin: auto;
     padding-left: 20px;
     @include themify($themes) {
-        color: themed('colorBetProtocol');
+        color: themed('none');
       }
     font-size: 35px;
     margin-bottom: 20px;
@@ -326,7 +322,7 @@ $landing-gradient-hover: linear-gradient(228deg, darken(rgba(127, 244, 222, 0.95
     line-height: 1.4;
     text-align: left;
     @include themify($themes) {
-        color: themed('colorBetProtocol');
+        color: themed('none');
     }
     position: relative;
     font-weight: 500;
@@ -374,7 +370,7 @@ $landing-gradient-hover: linear-gradient(228deg, darken(rgba(127, 244, 222, 0.95
     font-size: 25px;
     font-weight: 300;
     @include themify($themes) {
-        color: themed('colorBetProtocol');
+        color: themed('none');
     }
 }
 
@@ -387,8 +383,8 @@ $landing-gradient-hover: linear-gradient(228deg, darken(rgba(127, 244, 222, 0.95
     display: block;
     margin: 50px auto;
     @include themify($themes) {
-        background: linear-gradient(to right, themed('colorBetProtocol'), themed('colorBetProtocolSecondary'));
-        box-shadow: 1px 10px 100px 1px themed('colorBetProtocol');
+        background: linear-gradient(to right, themed('none'), themed('noneSecondary'));
+        box-shadow: 1px 10px 100px 1px themed('none');
 
     }
 
@@ -427,7 +423,7 @@ $landing-gradient-hover: linear-gradient(228deg, darken(rgba(127, 244, 222, 0.95
     display: block;
     font-size: 40px;
     @include themify($themes) {
-        color: themed('colorBetProtocol');
+        color: themed('none');
       }
 
 }
@@ -1212,7 +1208,7 @@ a{
         background: transparent;
         border: none;
         @include themify($themes) {
-            color: themed('colorBetProtocol');
+            color: themed('none');
         }        
         padding: 0;
         margin-right: 60px;
@@ -1225,14 +1221,14 @@ a{
     a{
         margin-top: 40px;
         @include themify($themes) {
-            color: themed('colorBetProtocol');
+            color: themed('none');
         }
         border : none;
     }
 
     p{
         @include themify($themes) {
-            color: themed('colorBetProtocol');
+            color: themed('none');
         }
     }
     h5{
@@ -1244,7 +1240,7 @@ a{
         text-align: left;
         margin-top: 10px;
         @include themify($themes) {
-            color: themed('colorBetProtocol');
+            color: themed('none');
         }    
     }
 }
@@ -1304,7 +1300,7 @@ a{
 
     h2{
         @include themify($themes) {
-            color: themed('colorBetProtocol');
+            color: themed('none');
         } 
     }
 
@@ -1313,7 +1309,7 @@ a{
     }
     h4{
         @include themify($themes) {
-            color: themed('colorBetProtocol');
+            color: themed('none');
         } 
     }
 
@@ -1371,7 +1367,7 @@ a{
     h2{
         text-align: left;
         @include themify($themes) {
-            color: themed('colorBetProtocol');
+            color: themed('none');
         } 
     }
 
@@ -1380,7 +1376,7 @@ a{
     }
     h4{
         @include themify($themes) {
-            color: themed('colorBetProtocol');
+            color: themed('none');
         } 
     }
 

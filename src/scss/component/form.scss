@@ -11,9 +11,7 @@ label{
 
 div{
     &::after{
-        @include themify($themes) {
-            border-bottom : 2px solid themed('colorBetProtocol') !important;
-        }
+       
        
     }
 }
@@ -26,9 +24,7 @@ div{
     width: 100%;
     padding: 5px 10px;
     font-size: 18px;
-    @include themify($themes) {
-        color: themed('colorBetProtocol');
-    }
+   
     height: 32px;
     transition: border 0.3s;
     background: transparent;
@@ -183,9 +179,7 @@ div{
       transition: all 0.3s;
       background: transparent;
 
-      @include themify($themes) {
-        border: 1px solid themed('colorBetProtocol');
-      }
+     
     }
 
     .Select-placeholder, .Select-input {
@@ -384,17 +378,7 @@ div{
     transition: all 0.3s;
     text-align: center;
 
-    @include themify($themes) {
-      border: 1px solid themed('colorBetProtocol');
-      color: themed('colorText');
-    }
-
-    &:hover {
-
-      @include themify($themes) {
-        background: themed('colorBetProtocol');
-      }
-    }
+   
   }
 
   span {
