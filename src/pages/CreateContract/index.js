@@ -26,7 +26,8 @@ const defaultProps = {
     validator_fee : 0,
     fee_percentage : 0.01,
     state : 'Waiting for approval',
-    total_paid : 0
+    total_paid : 0,
+    client : {}
 }
 
 
@@ -78,10 +79,13 @@ class CreateContract extends React.Component{
     }
 
     projectData = (props) => {
+        console.log(props.profile.getMe())
         this.setState({...this.state, 
+            client : props.profile.getMe(),
             validators : APISingleton.getAllByType('validator'),
             companies : APISingleton.getAllByType('company'),
-            clients   : APISingleton.getAllByType('client')
+            clients   : APISingleton.getAllByType('client'),
+
         })
     }
 
@@ -240,13 +244,15 @@ class CreateContract extends React.Component{
                                         id="client"
                                         helperText={'Choose the Client Name'}
                                         type={"client"}
+                                        disabled
                                         onChange={this.onChange}
+                                        value={this.state.client.address}
                                         options={this.state.clients}
                                         style={{width : '80%'}}
                                         label="Client Name"
                                         >
                                         {this.state.clients.map(option => (
-                                            <MenuItem key={option} value={option}>
+                                            <MenuItem key={option.address} value={option.address}>
                                                 {option.name} ({ StringWorkerSingleton.toAddressConcat(option.address) })
                                             </MenuItem>
                                         ))}

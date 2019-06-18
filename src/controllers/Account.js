@@ -34,6 +34,10 @@ class Account{
         }    
     }
 
+    getMe = () => {
+        return this.params;
+    }
+
     login = async ({name, address}) => {
         try{
             this.params = { ...this.params, name, address };
