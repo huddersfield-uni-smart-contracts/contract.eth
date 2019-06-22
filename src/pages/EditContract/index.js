@@ -86,7 +86,7 @@ class EditContract extends React.Component{
 
     edit = async () => {
         const { profile } = this.props;
-        let contract = APISingleton.getContractByContractAddress(this.state.contract_adress);
+        let contract = APISingleton.getContractByContractAddress(this.state.contract_address);
         await profile.editContract({...contract, ...this.state});
         // Clean State
         this.state = null;

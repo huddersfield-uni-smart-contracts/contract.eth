@@ -69,7 +69,7 @@ const fromDatabasetoTable = (data) => {
         return {
             id :  index,
             name : item.pba_name,
-            contract_adress : item.contract_address,
+            contract_address : item.contract_address,
 			company : item.company.name,
             client: item.client.name,
             validator  : item.validator.name,
@@ -92,8 +92,8 @@ const rows = [
         numeric: false
     },
     {
-        id: 'contract_adress',
-        label: 'Contract Adress',
+        id: 'contract_address',
+        label: 'Contract address',
         numeric: false
     },
     {
@@ -325,7 +325,7 @@ class ContractsTable extends React.Component {
 
     handleClick = (event, object) => {
         let id = object.id;
-        let contract = APISingleton.getContractByContractAddress(object.contract_adress);
+        let contract = APISingleton.getContractByContractAddress(object.contract_address);
         this.goToEdit(contract);
         const { selected } = this.state;
         const selectedIndex = selected.indexOf(id);
@@ -393,7 +393,7 @@ class ContractsTable extends React.Component {
                                 >
                                     <TableCell align="left">{n.id}</TableCell>
                                     <TableCell align="left">{n.name}</TableCell>
-                                    <TableCell align="left">{StringWorkerSingleton.toAddressConcat(n.contract_adress)}</TableCell>
+                                    <TableCell align="left">{StringWorkerSingleton.toAddressConcat(n.contract_address)}</TableCell>
                                   
                                     <TableCell align="left">{n.paid} €</TableCell>
                                     <TableCell align="left">{n.amount} €</TableCell>
